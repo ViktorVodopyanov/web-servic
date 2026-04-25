@@ -16,3 +16,11 @@ export interface Course {
     duration: number;
     teacherId: number;
 }
+
+export interface Feedback {
+    id: number;
+    name: string;
+    email: string;
+    message: string;
+    createdAt: string;
+}
