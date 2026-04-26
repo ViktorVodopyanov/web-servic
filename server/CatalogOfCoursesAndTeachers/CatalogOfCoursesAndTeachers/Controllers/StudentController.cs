@@ -15,6 +15,13 @@ namespace CatalogOfCoursesAndTeachers.Controllers
             _context = context;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var students = await _context.Students.ToListAsync();
+            return Ok(students);
+        }
+
         [HttpGet("course/{courseId}")]
         public async Task<IActionResult> GetByCourse(int courseId)
         {
@@ -25,6 +32,19 @@ namespace CatalogOfCoursesAndTeachers.Controllers
 
             var students = await _context.Students
                 .Where(s => s.CourseId == courseId)
+                .ToListAsync();
+
+            return Ok(students);
+        }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> Search([FromQuery] string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                return BadRequest("Name is required");
+
+            var students = await _context.Students
+                .Where(s => s.FullName.Contains(name))
                 .ToListAsync();
 
             return Ok(students);
@@ -42,6 +62,30 @@ namespace CatalogOfCoursesAndTeachers.Controllers
                 return BadRequest("Course not found");
 
             _context.Students.Add(student);
+            await _context.SaveChangesAsync();
+
+            return Ok(student);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] Student updated)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var student = await _context.Students.FindAsync(id);
+
+            if (student == null)
+                return NotFound();
+
+            var courseExists = await _context.Courses.AnyAsync(c => c.Id == updated.CourseId);
+
+            if (!courseExists)
+                return BadRequest("Course not found");
+
+            student.FullName = updated.FullName;
+            student.CourseId = updated.CourseId;
+
             await _context.SaveChangesAsync();
 
             return Ok(student);

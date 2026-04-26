@@ -16,5 +16,8 @@ namespace CatalogOfCoursesAndTeachers.Models
 
         [JsonIgnore]
         public Teacher? Teacher { get; set; }
+
+        [JsonIgnore]
+        public List<Student>? Students { get; set; }
     }
 }

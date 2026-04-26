@@ -18,10 +18,7 @@ namespace CatalogOfCoursesAndTeachers.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var courses = await _context.Courses
-                .Include(c => c.Teacher)
-                .ToListAsync();
-
+            var courses = await _context.Courses.ToListAsync();
             return Ok(courses);
         }
 
@@ -32,7 +29,6 @@ namespace CatalogOfCoursesAndTeachers.Controllers
                 return BadRequest("Title is required");
 
             var result = await _context.Courses
-                .Include(c => c.Teacher)
                 .Where(c => c.Title.Contains(title))
                 .ToListAsync();
 
@@ -48,12 +44,12 @@ namespace CatalogOfCoursesAndTeachers.Controllers
             var teacherExists = await _context.Teachers.AnyAsync(t => t.Id == course.TeacherId);
 
             if (!teacherExists)
-                return BadRequest("Teacher with this ID does not exist");
+                return BadRequest("Teacher not found");
 
             _context.Courses.Add(course);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetAll), new { id = course.Id }, course);
+            return Ok(course);
         }
 
         [HttpPut("{id}")]
@@ -70,7 +66,7 @@ namespace CatalogOfCoursesAndTeachers.Controllers
             var teacherExists = await _context.Teachers.AnyAsync(t => t.Id == updated.TeacherId);
 
             if (!teacherExists)
-                return BadRequest("Teacher with this ID does not exist");
+                return BadRequest("Teacher not found");
 
             course.Title = updated.Title;
             course.Duration = updated.Duration;
@@ -84,6 +80,11 @@ namespace CatalogOfCoursesAndTeachers.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
+            var hasStudents = await _context.Students.AnyAsync(s => s.CourseId == id);
+
+            if (hasStudents)
+                return BadRequest("Cannot delete course because course has students");
+
             var course = await _context.Courses.FindAsync(id);
 
             if (course == null)

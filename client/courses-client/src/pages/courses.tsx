@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+﻿import { useEffect, useMemo, useState } from 'react';
 import {
     Button,
     Card,
@@ -6,28 +6,52 @@ import {
     Input,
     InputNumber,
     Modal,
+    Popconfirm,
     Select,
     Space,
     Table,
+    Typography,
     message,
 } from 'antd';
-import { api, Course, Teacher } from '@/services/api';
+import { Link } from 'umi';
+import {
+    Course,
+    Teacher,
+    createCourse,
+    deleteCourse,
+    getCourses,
+    getTeachers,
+    updateCourse,
+} from '@/services/api';
 
 export default function CoursesPage() {
     const [courses, setCourses] = useState<Course[]>([]);
     const [teachers, setTeachers] = useState<Teacher[]>([]);
+    const [filter, setFilter] = useState('');
     const [open, setOpen] = useState(false);
     const [editingCourse, setEditingCourse] = useState<Course | null>(null);
+    const [loading, setLoading] = useState(false);
     const [form] = Form.useForm();
 
     const loadCourses = async () => {
-        const response = await api.get<Course[]>('/Courses');
-        setCourses(response.data);
+        try {
+            setLoading(true);
+            const data = await getCourses();
+            setCourses(data);
+        } catch {
+            message.error('Ошибка загрузки курсов');
+        } finally {
+            setLoading(false);
+        }
     };
 
     const loadTeachers = async () => {
-        const response = await api.get<Teacher[]>('/Teachers');
-        setTeachers(response.data);
+        try {
+            const data = await getTeachers();
+            setTeachers(data);
+        } catch {
+            message.error('Ошибка загрузки преподавателей');
+        }
     };
 
     useEffect(() => {
@@ -35,60 +59,107 @@ export default function CoursesPage() {
         loadTeachers();
     }, []);
 
+    const filteredCourses = useMemo(() => {
+        return courses.filter((course) =>
+            course.title.toLowerCase().includes(filter.toLowerCase()),
+        );
+    }, [courses, filter]);
+
+    const getTeacherName = (teacherId: number) => {
+        const teacher = teachers.find((item) => item.id === teacherId);
+        return teacher ? teacher.name : 'Не найден';
+    };
+
     const saveCourse = async () => {
         const values = await form.validateFields();
 
-        if (editingCourse) {
-            await api.put(`/Courses/${editingCourse.id}`, values);
-            message.success('Курс обновлён');
-        } else {
-            await api.post('/Courses', values);
-            message.success('Курс добавлен');
+        try {
+            if (editingCourse) {
+                await updateCourse(editingCourse.id, values);
+                message.success('Курс обновлён');
+            } else {
+                await createCourse(values);
+                message.success('Курс добавлен');
+            }
+
+            setOpen(false);
+            setEditingCourse(null);
+            form.resetFields();
+            loadCourses();
+        } catch {
+            message.error('Ошибка сохранения курса');
         }
-
-        setOpen(false);
-        setEditingCourse(null);
-        form.resetFields();
-        loadCourses();
     };
 
-    const deleteCourse = async (id: number) => {
-        await api.delete(`/Courses/${id}`);
-        message.success('Курс удалён');
-        loadCourses();
-    };
-
-    const getTeacherName = (teacherId: number) => {
-        const teacher = teachers.find((t) => t.id === teacherId);
-        return teacher ? teacher.name : 'Не найден';
+    const removeCourse = async (id: number) => {
+        try {
+            await deleteCourse(id);
+            message.success('Курс удалён');
+            loadCourses();
+        } catch {
+            message.error('Нельзя удалить курс, если на нём есть студенты');
+        }
     };
 
     return (
         <Card
-            title="Курсы"
+            title={<Typography.Title level={3} style={{ margin: 0 }}>Курсы</Typography.Title>}
             extra={
-                <Button type="primary" onClick={() => setOpen(true)}>
-                    Добавить
+                <Button
+                    type="primary"
+                    onClick={() => {
+                        setEditingCourse(null);
+                        form.resetFields();
+                        setOpen(true);
+                    }}
+                >
+                    Добавить курс
                 </Button>
             }
+            bordered={false}
         >
+            <Input.Search
+                placeholder="Фильтр по названию курса"
+                allowClear
+                value={filter}
+                onChange={(e) => setFilter(e.target.value)}
+                style={{ maxWidth: 400, marginBottom: 20 }}
+            />
+
             <Table
                 rowKey="id"
-                dataSource={courses}
+                bordered
+                loading={loading}
+                dataSource={filteredCourses}
+                pagination={{ pageSize: 5 }}
                 columns={[
-                    { title: 'ID', dataIndex: 'id' },
-                    { title: 'Название', dataIndex: 'title' },
-                    { title: 'Длительность', dataIndex: 'duration' },
+                    { title: 'ID', dataIndex: 'id', width: 80 },
+                    { title: 'Название курса', dataIndex: 'title' },
+                    {
+                        title: 'Длительность',
+                        dataIndex: 'duration',
+                        render: (duration: number) => `${duration} ч.`,
+                    },
                     {
                         title: 'Преподаватель',
                         dataIndex: 'teacherId',
                         render: (teacherId: number) => getTeacherName(teacherId),
                     },
                     {
+                        title: 'Студенты',
+                        render: (_, record: Course) => (
+                            <Link to={`/courses/${record.id}/students`}>
+                                Открыть студентов
+                            </Link>
+                        ),
+                    },
+                    {
                         title: 'Действия',
-                        render: (_, record) => (
+                        width: 240,
+                        render: (_, record: Course) => (
                             <Space>
                                 <Button
+                                    type="primary"
                                     onClick={() => {
                                         setEditingCourse(record);
                                         form.setFieldsValue(record);
@@ -97,9 +168,15 @@ export default function CoursesPage() {
                                 >
                                     Изменить
                                 </Button>
-                                <Button danger onClick={() => deleteCourse(record.id)}>
-                                    Удалить
-                                </Button>
+
+                                <Popconfirm
+                                    title="Удалить курс?"
+                                    okText="Да"
+                                    cancelText="Нет"
+                                    onConfirm={() => removeCourse(record.id)}
+                                >
+                                    <Button danger>Удалить</Button>
+                                </Popconfirm>
                             </Space>
                         ),
                     },
@@ -115,6 +192,8 @@ export default function CoursesPage() {
                     setEditingCourse(null);
                     form.resetFields();
                 }}
+                okText="Сохранить"
+                cancelText="Отмена"
             >
                 <Form form={form} layout="vertical">
                     <Form.Item
@@ -122,13 +201,13 @@ export default function CoursesPage() {
                         label="Название курса"
                         rules={[{ required: true, message: 'Введите название курса' }]}
                     >
-                        <Input />
+                        <Input placeholder="Основы программирования" />
                     </Form.Item>
 
                     <Form.Item
                         name="duration"
-                        label="Длительность"
-                        rules={[{ required: true, message: 'Введите длительность' }]}
+                        label="Длительность, часов"
+                        rules={[{ required: true, message: 'Введите длительность курса' }]}
                     >
                         <InputNumber min={1} style={{ width: '100%' }} />
                     </Form.Item>

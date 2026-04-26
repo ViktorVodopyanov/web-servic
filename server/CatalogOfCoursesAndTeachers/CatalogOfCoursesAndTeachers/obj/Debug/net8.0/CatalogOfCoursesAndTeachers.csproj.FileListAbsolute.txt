@@ -379,3 +379,4 @@ C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\o
 C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\obj\Debug\net8.0\CatalogOfCoursesAndTeachers.pdb
 C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\obj\Debug\net8.0\CatalogOfCoursesAndTeachers.genruntimeconfig.cache
 C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\obj\Debug\net8.0\ref\CatalogOfCoursesAndTeachers.dll
+C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\obj\Debug\net8.0\CatalogOfCoursesAndTeachers.sourcelink.json

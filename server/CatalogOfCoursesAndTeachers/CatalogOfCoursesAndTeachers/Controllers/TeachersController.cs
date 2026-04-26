@@ -18,10 +18,7 @@ namespace CatalogOfCoursesAndTeachers.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var teachers = await _context.Teachers
-                .Include(t => t.Courses)
-                .ToListAsync();
-
+            var teachers = await _context.Teachers.ToListAsync();
             return Ok(teachers);
         }
 
@@ -32,7 +29,6 @@ namespace CatalogOfCoursesAndTeachers.Controllers
                 return BadRequest("Department is required");
 
             var result = await _context.Teachers
-                .Include(t => t.Courses)
                 .Where(t => t.Department.Contains(department))
                 .ToListAsync();
 
@@ -48,7 +44,7 @@ namespace CatalogOfCoursesAndTeachers.Controllers
             _context.Teachers.Add(teacher);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetAll), new { id = teacher.Id }, teacher);
+            return Ok(teacher);
         }
 
         [HttpPut("{id}")]
@@ -73,15 +69,15 @@ namespace CatalogOfCoursesAndTeachers.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var teacher = await _context.Teachers
-                .Include(t => t.Courses)
-                .FirstOrDefaultAsync(t => t.Id == id);
+            var hasCourses = await _context.Courses.AnyAsync(c => c.TeacherId == id);
+
+            if (hasCourses)
+                return BadRequest("Cannot delete teacher because teacher has courses");
+
+            var teacher = await _context.Teachers.FindAsync(id);
 
             if (teacher == null)
                 return NotFound();
-
-            if (teacher.Courses != null && teacher.Courses.Any())
-                return BadRequest("Cannot delete teacher because he has courses");
 
             _context.Teachers.Remove(teacher);
             await _context.SaveChangesAsync();

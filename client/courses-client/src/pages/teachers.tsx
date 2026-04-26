@@ -1,111 +1,180 @@
-﻿import React, { useEffect, useState } from 'react';
-import { Button, Card, Form, Input, Modal, Space, Table, message } from 'antd';
-import { api, Teacher } from '@/services/api';
+﻿import { useEffect, useMemo, useState } from 'react';
+import {
+    Button,
+    Card,
+    Form,
+    Input,
+    Modal,
+    Popconfirm,
+    Space,
+    Table,
+    Typography,
+    message,
+} from 'antd';
+import {
+    Teacher,
+    createTeacher,
+    deleteTeacher,
+    getTeachers,
+    updateTeacher,
+} from '@/services/api';
 
 export default function TeachersPage() {
-  const [teachers, setTeachers] = useState<Teacher[]>([]);
-  const [open, setOpen] = useState(false);
-  const [editingTeacher, setEditingTeacher] = useState<Teacher | null>(null);
-  const [form] = Form.useForm();
+    const [teachers, setTeachers] = useState<Teacher[]>([]);
+    const [filter, setFilter] = useState('');
+    const [open, setOpen] = useState(false);
+    const [editingTeacher, setEditingTeacher] = useState<Teacher | null>(null);
+    const [loading, setLoading] = useState(false);
+    const [form] = Form.useForm();
 
-  const loadTeachers = async () => {
-    const response = await api.get<Teacher[]>('/Teachers');
-    setTeachers(response.data);
-  };
+    const loadTeachers = async () => {
+        try {
+            setLoading(true);
+            const data = await getTeachers();
+            setTeachers(data);
+        } catch {
+            message.error('Ошибка загрузки преподавателей');
+        } finally {
+            setLoading(false);
+        }
+    };
 
-  useEffect(() => {
-    loadTeachers();
-  }, []);
+    useEffect(() => {
+        loadTeachers();
+    }, []);
 
-  const saveTeacher = async () => {
-    const values = await form.validateFields();
+    const filteredTeachers = useMemo(() => {
+        return teachers.filter((teacher) =>
+            teacher.name.toLowerCase().includes(filter.toLowerCase()),
+        );
+    }, [teachers, filter]);
 
-    if (editingTeacher) {
-      await api.put(`/Teachers/${editingTeacher.id}`, values);
-      message.success('Преподаватель обновлён');
-    } else {
-      await api.post('/Teachers', values);
-      message.success('Преподаватель добавлен');
-    }
+    const saveTeacher = async () => {
+        const values = await form.validateFields();
 
-    setOpen(false);
-    setEditingTeacher(null);
-    form.resetFields();
-    loadTeachers();
-  };
+        try {
+            if (editingTeacher) {
+                await updateTeacher(editingTeacher.id, values);
+                message.success('Преподаватель обновлён');
+            } else {
+                await createTeacher(values);
+                message.success('Преподаватель добавлен');
+            }
 
-  const deleteTeacher = async (id: number) => {
-    await api.delete(`/Teachers/${id}`);
-    message.success('Преподаватель удалён');
-    loadTeachers();
-  };
+            setOpen(false);
+            setEditingTeacher(null);
+            form.resetFields();
+            loadTeachers();
+        } catch {
+            message.error('Ошибка сохранения преподавателя');
+        }
+    };
 
-  return (
-    <Card
-      title="Преподаватели"
-      extra={
-        <Button type="primary" onClick={() => setOpen(true)}>
-          Добавить
-        </Button>
-      }
-    >
-      <Table
-        rowKey="id"
-        dataSource={teachers}
-        columns={[
-          { title: 'ID', dataIndex: 'id' },
-          { title: 'ФИО', dataIndex: 'name' },
-          { title: 'Кафедра', dataIndex: 'department' },
-          {
-            title: 'Действия',
-            render: (_, record) => (
-              <Space>
+    const removeTeacher = async (id: number) => {
+        try {
+            await deleteTeacher(id);
+            message.success('Преподаватель удалён');
+            loadTeachers();
+        } catch {
+            message.error('Нельзя удалить преподавателя, если у него есть курсы');
+        }
+    };
+
+    return (
+        <Card
+            title={<Typography.Title level={3} style={{ margin: 0 }}>Преподаватели</Typography.Title>}
+            extra={
                 <Button
-                  onClick={() => {
-                    setEditingTeacher(record);
-                    form.setFieldsValue(record);
-                    setOpen(true);
-                  }}
+                    type="primary"
+                    onClick={() => {
+                        setEditingTeacher(null);
+                        form.resetFields();
+                        setOpen(true);
+                    }}
                 >
-                  Изменить
+                    Добавить преподавателя
                 </Button>
-                <Button danger onClick={() => deleteTeacher(record.id)}>
-                  Удалить
-                </Button>
-              </Space>
-            ),
-          },
-        ]}
-      />
+            }
+            bordered={false}
+        >
+            <Input.Search
+                placeholder="Фильтр по ФИО"
+                allowClear
+                value={filter}
+                onChange={(e) => setFilter(e.target.value)}
+                style={{ maxWidth: 400, marginBottom: 20 }}
+            />
 
-      <Modal
-        title={editingTeacher ? 'Редактировать преподавателя' : 'Добавить преподавателя'}
-        open={open}
-        onOk={saveTeacher}
-        onCancel={() => {
-          setOpen(false);
-          setEditingTeacher(null);
-          form.resetFields();
-        }}
-      >
-        <Form form={form} layout="vertical">
-          <Form.Item
-            name="name"
-            label="ФИО"
-            rules={[{ required: true, message: 'Введите ФИО' }]}
-          >
-            <Input />
-          </Form.Item>
+            <Table
+                rowKey="id"
+                bordered
+                loading={loading}
+                dataSource={filteredTeachers}
+                pagination={{ pageSize: 5 }}
+                columns={[
+                    { title: 'ID', dataIndex: 'id', width: 80 },
+                    { title: 'ФИО', dataIndex: 'name' },
+                    { title: 'Кафедра', dataIndex: 'department' },
+                    {
+                        title: 'Действия',
+                        width: 240,
+                        render: (_, record: Teacher) => (
+                            <Space>
+                                <Button
+                                    type="primary"
+                                    onClick={() => {
+                                        setEditingTeacher(record);
+                                        form.setFieldsValue(record);
+                                        setOpen(true);
+                                    }}
+                                >
+                                    Изменить
+                                </Button>
 
-          <Form.Item
-            name="department"
-            label="Кафедра"
-            rules={[{ required: true, message: 'Введите кафедру' }]}
-          >
-            <Input />
-          </Form.Item>
-        </Form>
-      </Modal>
-    </Card>
-  );
+                                <Popconfirm
+                                    title="Удалить преподавателя?"
+                                    okText="Да"
+                                    cancelText="Нет"
+                                    onConfirm={() => removeTeacher(record.id)}
+                                >
+                                    <Button danger>Удалить</Button>
+                                </Popconfirm>
+                            </Space>
+                        ),
+                    },
+                ]}
+            />
+
+            <Modal
+                title={editingTeacher ? 'Редактировать преподавателя' : 'Добавить преподавателя'}
+                open={open}
+                onOk={saveTeacher}
+                onCancel={() => {
+                    setOpen(false);
+                    setEditingTeacher(null);
+                    form.resetFields();
+                }}
+                okText="Сохранить"
+                cancelText="Отмена"
+            >
+                <Form form={form} layout="vertical">
+                    <Form.Item
+                        name="name"
+                        label="ФИО"
+                        rules={[{ required: true, message: 'Введите ФИО преподавателя' }]}
+                    >
+                        <Input placeholder="Иванов Иван Иванович" />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="department"
+                        label="Кафедра"
+                        rules={[{ required: true, message: 'Введите кафедру' }]}
+                    >
+                        <Input placeholder="Информатика" />
+                    </Form.Item>
+                </Form>
+            </Modal>
+        </Card>
+    );
 }

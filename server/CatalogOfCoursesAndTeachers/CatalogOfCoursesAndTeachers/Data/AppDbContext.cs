@@ -8,8 +8,10 @@ public class AppDbContext : DbContext
     {
     }
 
-    public DbSet<Course> Courses { get; set; }
     public DbSet<Teacher> Teachers { get; set; }
+    public DbSet<Course> Courses { get; set; }
+    public DbSet<Student> Students { get; set; }
+    public DbSet<Feedback> Feedbacks { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -19,5 +21,10 @@ public class AppDbContext : DbContext
             .HasOne(c => c.Teacher)
             .WithMany(t => t.Courses)
             .HasForeignKey(c => c.TeacherId);
+
+        modelBuilder.Entity<Student>()
+            .HasOne(s => s.Course)
+            .WithMany(c => c.Students)
+            .HasForeignKey(s => s.CourseId);
     }
 }
