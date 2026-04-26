@@ -1,5 +1,5 @@
-﻿import { Link, Outlet, useLocation } from 'umi';
-import { Layout, Menu, Typography } from 'antd';
+﻿import { history, Link, Outlet, useLocation, useModel } from '@umijs/max';
+import { Button, Layout, Menu, Space, Typography } from 'antd';
 import {
     HomeOutlined,
     BookOutlined,
@@ -7,12 +7,27 @@ import {
     InfoCircleOutlined,
     MessageOutlined,
     UserOutlined,
+    LogoutOutlined,
+    LoginOutlined,
 } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
 
 export default function MainLayout() {
     const location = useLocation();
+    const { initialState, setInitialState } = useModel('@@initialState');
+
+    const currentUser = initialState?.currentUser;
+
+    const logout = () => {
+        localStorage.removeItem('token');
+
+        setInitialState({
+            currentUser: undefined,
+        });
+
+        history.push('/login');
+    };
 
     return (
         <Layout style={{ minHeight: '100vh' }}>
@@ -35,6 +50,24 @@ export default function MainLayout() {
                         { key: '/feedback', icon: <MessageOutlined />, label: <Link to="/feedback">Обратная связь</Link> },
                     ]}
                 />
+
+                <Space>
+                    {currentUser ? (
+                        <>
+                            <Typography.Text style={{ color: 'white' }}>
+                                {currentUser.userName}
+                            </Typography.Text>
+
+                            <Button icon={<LogoutOutlined />} onClick={logout}>
+                                Выйти
+                            </Button>
+                        </>
+                    ) : (
+                        <Button icon={<LoginOutlined />} onClick={() => history.push('/login')}>
+                            Войти
+                        </Button>
+                    )}
+                </Space>
             </Header>
 
             <Content style={{ padding: 24, background: '#f5f7fa' }}>

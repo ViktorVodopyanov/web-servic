@@ -380,3 +380,11 @@ C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\o
 C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\obj\Debug\net8.0\CatalogOfCoursesAndTeachers.genruntimeconfig.cache
 C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\obj\Debug\net8.0\ref\CatalogOfCoursesAndTeachers.dll
 C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\obj\Debug\net8.0\CatalogOfCoursesAndTeachers.sourcelink.json
+C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\D\web-servic\server\CatalogOfCoursesAndTeachers\CatalogOfCoursesAndTeachers\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
