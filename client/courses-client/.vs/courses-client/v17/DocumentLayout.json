@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\D\\web-servic\\client\\courses-client\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\DockerFile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DockerFile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\services\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\services\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\.umirc.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.umirc.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\pages\\courses.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\courses.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
@@ -17,38 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\layouts\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\layouts\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\pages\\login.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\login.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\access.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\access.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\.umirc.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.umirc.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\pages\\students.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\students.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\services\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\pages\\register.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\register.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\services\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\web-servic\\client\\courses-client\\src\\pages\\teachers.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -78,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,31 +78,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "app.tsx",
-              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\app.tsx",
-              "RelativeDocumentMoniker": "src\\app.tsx",
-              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\src\\app.tsx",
-              "RelativeToolTip": "src\\app.tsx",
-              "ViewState": "AgIAACcAAAAAAAAAAADwv0gAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-04-26T13:03:04.797Z"
+              "DocumentIndex": 0,
+              "Title": ".dockerignore",
+              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\.dockerignore",
+              "RelativeDocumentMoniker": ".dockerignore",
+              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\.dockerignore",
+              "RelativeToolTip": ".dockerignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-26T20:47:22.096Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "access.ts",
-              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\access.ts",
-              "RelativeDocumentMoniker": "src\\access.ts",
-              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\src\\access.ts",
-              "RelativeToolTip": "src\\access.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-04-26T13:02:40.836Z"
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-26T19:00:07.385Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
+              "Title": "nginx.conf",
+              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\nginx.conf",
+              "RelativeDocumentMoniker": "nginx.conf",
+              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\nginx.conf",
+              "RelativeToolTip": "nginx.conf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-26T18:59:48.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "auth.ts",
+              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\services\\auth.ts",
+              "RelativeDocumentMoniker": "src\\services\\auth.ts",
+              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\src\\services\\auth.ts",
+              "RelativeToolTip": "src\\services\\auth.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-26T18:59:06.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "teachers.tsx",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\teachers.tsx",
               "RelativeDocumentMoniker": "src\\pages\\teachers.tsx",
@@ -122,31 +140,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "api.ts",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\services\\api.ts",
               "RelativeDocumentMoniker": "src\\services\\api.ts",
               "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\src\\services\\api.ts",
               "RelativeToolTip": "src\\services\\api.ts",
-              "ViewState": "AgIAAEEAAAAAAAAAAADwv2IAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2026-04-24T15:08:12.029Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "students.tsx",
-              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\students.tsx",
-              "RelativeDocumentMoniker": "src\\pages\\students.tsx",
-              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\students.tsx",
-              "RelativeToolTip": "src\\pages\\students.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-04-25T10:49:28.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "index.tsx",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\layouts\\index.tsx",
               "RelativeDocumentMoniker": "src\\layouts\\index.tsx",
@@ -154,24 +160,23 @@
               "RelativeToolTip": "src\\layouts\\index.tsx",
               "ViewState": "AgIAAEAAAAAAAAAAAAAkwFMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-04-24T15:06:51.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T15:06:51.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": ".umirc.ts",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\.umirc.ts",
               "RelativeDocumentMoniker": ".umirc.ts",
               "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\.umirc.ts",
               "RelativeToolTip": ".umirc.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvyUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2026-04-24T15:22:01.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "index.tsx",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\index.tsx",
               "RelativeDocumentMoniker": "src\\pages\\index.tsx",
@@ -183,20 +188,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "courses.tsx",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\courses.tsx",
               "RelativeDocumentMoniker": "src\\pages\\courses.tsx",
               "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\courses.tsx",
               "RelativeToolTip": "src\\pages\\courses.tsx",
-              "ViewState": "AgIAAFcBAAAAAAAAAADwv2UBAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-04-24T15:09:01.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T15:09:01.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "tsconfig.json",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\tsconfig.json",
               "RelativeDocumentMoniker": "tsconfig.json",
@@ -204,12 +208,11 @@
               "RelativeToolTip": "tsconfig.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-25T11:24:19.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T11:24:19.007Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "package.json",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\package.json",
               "RelativeDocumentMoniker": "package.json",
@@ -217,48 +220,11 @@
               "RelativeToolTip": "package.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-25T11:17:17.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T11:17:17.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "auth.ts",
-              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\services\\auth.ts",
-              "RelativeDocumentMoniker": "src\\services\\auth.ts",
-              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\src\\services\\auth.ts",
-              "RelativeToolTip": "src\\services\\auth.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-04-26T13:03:26.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "login.tsx",
-              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\login.tsx",
-              "RelativeDocumentMoniker": "src\\pages\\login.tsx",
-              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\login.tsx",
-              "RelativeToolTip": "src\\pages\\login.tsx",
-              "ViewState": "AgIAACYAAAAAAAAAAADwv0cAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-04-26T13:04:38.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "register.tsx",
-              "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\register.tsx",
-              "RelativeDocumentMoniker": "src\\pages\\register.tsx",
-              "ToolTip": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\register.tsx",
-              "RelativeToolTip": "src\\pages\\register.tsx",
-              "ViewState": "AgIAADIAAAAAAAAAAADwv1MAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-04-26T13:18:21.12Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "feedback.tsx",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\feedback.tsx",
               "RelativeDocumentMoniker": "src\\pages\\feedback.tsx",
@@ -270,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "about.tsx",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\src\\pages\\about.tsx",
               "RelativeDocumentMoniker": "src\\pages\\about.tsx",
@@ -282,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "package-lock.json",
               "DocumentMoniker": "C:\\D\\web-servic\\client\\courses-client\\package-lock.json",
               "RelativeDocumentMoniker": "package-lock.json",

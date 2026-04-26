@@ -3,6 +3,8 @@ import { defineConfig } from '@umijs/max';
 export default defineConfig({
     antd: {},
 
+    hash: true,
+
     request: {
         dataField: '',
     },
@@ -13,6 +15,13 @@ export default defineConfig({
 
     npmClient: 'npm',
 
+    proxy: {
+        '/api': {
+            target: 'http://localhost:5231',
+            changeOrigin: true,
+        },
+    },
+
     routes: [
         { path: '/login', component: './login', layout: false },
         { path: '/register', component: './register', layout: false },
@@ -22,20 +31,8 @@ export default defineConfig({
         { path: '/courses', component: './courses' },
         { path: '/feedback', component: './feedback' },
 
-        {
-            path: '/students',
-            component: './students',
-            access: 'canAccessProtected',
-        },
-        {
-            path: '/teachers',
-            component: './teachers',
-            access: 'canAccessProtected',
-        },
-        {
-            path: '/courses/:courseId/students',
-            component: './students',
-            access: 'canAccessProtected',
-        },
+        { path: '/students', component: './students', access: 'canAccessProtected' },
+        { path: '/teachers', component: './teachers', access: 'canAccessProtected' },
+        { path: '/courses/:courseId/students', component: './students', access: 'canAccessProtected' },
     ],
 });

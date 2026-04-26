@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|c:\\d\\web-servic\\server\\catalogofcoursesandteachers\\catalogofcoursesandteachers\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|solutionrelative:catalogofcoursesandteachers\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|c:\\d\\web-servic\\server\\catalogofcoursesandteachers\\catalogofcoursesandteachers\\catalogofcoursesandteachers.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|solutionrelative:catalogofcoursesandteachers\\catalogofcoursesandteachers.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|c:\\d\\web-servic\\server\\catalogofcoursesandteachers\\catalogofcoursesandteachers\\dockerfile||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|solutionrelative:catalogofcoursesandteachers\\dockerfile||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|c:\\d\\web-servic\\server\\catalogofcoursesandteachers\\catalogofcoursesandteachers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|solutionrelative:catalogofcoursesandteachers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|c:\\d\\web-servic\\server\\catalogofcoursesandteachers\\catalogofcoursesandteachers\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|solutionrelative:catalogofcoursesandteachers\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|c:\\d\\web-servic\\server\\catalogofcoursesandteachers\\catalogofcoursesandteachers\\models\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|solutionrelative:catalogofcoursesandteachers\\models\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|c:\\d\\web-servic\\server\\catalogofcoursesandteachers\\catalogofcoursesandteachers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|solutionrelative:catalogofcoursesandteachers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60FAACE6-CA7A-4154-8D4A-0B0CAE87D931}|CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj|c:\\d\\web-servic\\server\\catalogofcoursesandteachers\\catalogofcoursesandteachers\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -82,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,19 +102,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\RegisterRequest.cs",
-              "ToolTip": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\RegisterRequest.cs",
-              "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Models\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-26T13:16:11.962Z"
+              "DocumentIndex": 1,
+              "Title": "CatalogOfCoursesAndTeachers",
+              "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj",
+              "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj",
+              "ToolTip": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj",
+              "RelativeToolTip": "CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-26T20:46:30.782Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": ".dockerignore",
+              "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\.dockerignore",
+              "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\.dockerignore",
+              "ToolTip": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\.dockerignore",
+              "RelativeToolTip": "CatalogOfCoursesAndTeachers\\.dockerignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-26T20:46:10.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Dockerfile",
+              "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Dockerfile",
+              "ToolTip": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Dockerfile",
+              "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-26T19:01:28.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\AppUser.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\AppUser.cs",
@@ -114,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Controllers\\AuthController.cs",
@@ -126,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "UserInfo.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\UserInfo.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\UserInfo.cs",
@@ -138,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "AuthResponse.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\AuthResponse.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\AuthResponse.cs",
@@ -150,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\LoginRequest.cs",
@@ -162,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\Course.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\Course.cs",
@@ -174,20 +213,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Data\\AppDbContext.cs",
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAQwBAAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T09:52:44.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T09:52:44.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Program.cs",
+              "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Program.cs",
+              "ToolTip": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Program.cs",
+              "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T09:53:10.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\RegisterRequest.cs",
+              "ToolTip": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\RegisterRequest.cs",
+              "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Models\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T13:16:11.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Feedback.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\Feedback.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\Feedback.cs",
@@ -199,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\appsettings.json",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\appsettings.json",
@@ -211,19 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Program.cs",
-              "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Program.cs",
-              "ToolTip": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Program.cs",
-              "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T09:53:10.464Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "TeachersController.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Controllers\\TeachersController.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Controllers\\TeachersController.cs",
@@ -235,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\Student.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\Student.cs",
@@ -247,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Teacher.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Models\\Teacher.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Models\\Teacher.cs",
@@ -259,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Controllers\\StudentController.cs",
@@ -271,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "FeedbacksController.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Controllers\\FeedbacksController.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Controllers\\FeedbacksController.cs",
@@ -283,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "CoursesController.cs",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Controllers\\CoursesController.cs",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Controllers\\CoursesController.cs",
@@ -295,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\D\\web-servic\\server\\CatalogOfCoursesAndTeachers\\CatalogOfCoursesAndTeachers\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "CatalogOfCoursesAndTeachers\\Properties\\launchSettings.json",

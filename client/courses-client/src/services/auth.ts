@@ -1,6 +1,6 @@
 import { request } from 'umi';
 
-const API = 'http://localhost:5231/api';
+const API = '/api';
 
 export interface LoginData {
     login: string;
