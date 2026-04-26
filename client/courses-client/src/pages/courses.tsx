@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import {
     Button,
     Card,
@@ -6,87 +6,97 @@ import {
     Input,
     InputNumber,
     Modal,
-    Select,
+    Popconfirm,
     Space,
     Table,
+    Typography,
     message,
 } from 'antd';
-import { api, Course, Teacher } from '@/services/api';
+
+interface Course {
+    id: number;
+    title: string;
+    duration: number;
+}
 
 export default function CoursesPage() {
     const [courses, setCourses] = useState<Course[]>([]);
-    const [teachers, setTeachers] = useState<Teacher[]>([]);
+    const [countText, setCountText] = useState('Количество курсов: 0');
     const [open, setOpen] = useState(false);
     const [editingCourse, setEditingCourse] = useState<Course | null>(null);
     const [form] = Form.useForm();
 
-    const loadCourses = async () => {
-        const response = await api.get<Course[]>('/Courses');
-        setCourses(response.data);
-    };
-
-    const loadTeachers = async () => {
-        const response = await api.get<Teacher[]>('/Teachers');
-        setTeachers(response.data);
-    };
-
     useEffect(() => {
-        loadCourses();
-        loadTeachers();
-    }, []);
+        setCountText(`Количество курсов: ${courses.length}`);
+    }, [courses]);
 
     const saveCourse = async () => {
         const values = await form.validateFields();
 
         if (editingCourse) {
-            await api.put(`/Courses/${editingCourse.id}`, values);
+            setCourses(
+                courses.map((course) =>
+                    course.id === editingCourse.id
+                        ? { ...course, ...values }
+                        : course,
+                ),
+            );
             message.success('Курс обновлён');
         } else {
-            await api.post('/Courses', values);
+            const newCourse: Course = {
+                id: Date.now(),
+                title: values.title,
+                duration: values.duration,
+            };
+
+            setCourses([...courses, newCourse]);
             message.success('Курс добавлен');
         }
 
         setOpen(false);
         setEditingCourse(null);
         form.resetFields();
-        loadCourses();
     };
 
-    const deleteCourse = async (id: number) => {
-        await api.delete(`/Courses/${id}`);
+    const deleteCourse = (id: number) => {
+        setCourses(courses.filter((course) => course.id !== id));
         message.success('Курс удалён');
-        loadCourses();
-    };
-
-    const getTeacherName = (teacherId: number) => {
-        const teacher = teachers.find((t) => t.id === teacherId);
-        return teacher ? teacher.name : 'Не найден';
     };
 
     return (
         <Card
             title="Курсы"
             extra={
-                <Button type="primary" onClick={() => setOpen(true)}>
+                <Button
+                    type="primary"
+                    onClick={() => {
+                        setEditingCourse(null);
+                        form.resetFields();
+                        setOpen(true);
+                    }}
+                >
                     Добавить
                 </Button>
             }
         >
+            <Typography.Text strong>{countText}</Typography.Text>
+
             <Table
+                style={{ marginTop: 20 }}
                 rowKey="id"
                 dataSource={courses}
+                pagination={{ pageSize: 5 }}
                 columns={[
                     { title: 'ID', dataIndex: 'id' },
                     { title: 'Название', dataIndex: 'title' },
-                    { title: 'Длительность', dataIndex: 'duration' },
                     {
-                        title: 'Преподаватель',
-                        dataIndex: 'teacherId',
-                        render: (teacherId: number) => getTeacherName(teacherId),
+                        title: 'Длительность',
+                        dataIndex: 'duration',
+                        render: (duration: number) => `${duration} ч.`,
                     },
                     {
                         title: 'Действия',
-                        render: (_, record) => (
+                        render: (_, record: Course) => (
                             <Space>
                                 <Button
                                     onClick={() => {
@@ -97,9 +107,15 @@ export default function CoursesPage() {
                                 >
                                     Изменить
                                 </Button>
-                                <Button danger onClick={() => deleteCourse(record.id)}>
-                                    Удалить
-                                </Button>
+
+                                <Popconfirm
+                                    title="Удалить курс?"
+                                    okText="Да"
+                                    cancelText="Нет"
+                                    onConfirm={() => deleteCourse(record.id)}
+                                >
+                                    <Button danger>Удалить</Button>
+                                </Popconfirm>
                             </Space>
                         ),
                     },
@@ -131,20 +147,6 @@ export default function CoursesPage() {
                         rules={[{ required: true, message: 'Введите длительность' }]}
                     >
                         <InputNumber min={1} style={{ width: '100%' }} />
-                    </Form.Item>
-
-                    <Form.Item
-                        name="teacherId"
-                        label="Преподаватель"
-                        rules={[{ required: true, message: 'Выберите преподавателя' }]}
-                    >
-                        <Select
-                            placeholder="Выберите преподавателя"
-                            options={teachers.map((teacher) => ({
-                                value: teacher.id,
-                                label: teacher.name,
-                            }))}
-                        />
                     </Form.Item>
                 </Form>
             </Modal>

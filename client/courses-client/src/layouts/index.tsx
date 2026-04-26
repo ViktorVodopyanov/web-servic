@@ -1,5 +1,4 @@
-﻿import React from 'react';
-import { Link, Outlet } from 'umi';
+﻿import { Link, Outlet } from 'react-router-dom';
 import { Layout, Menu, Typography } from 'antd';
 
 const { Header, Content, Footer } = Layout;
@@ -15,6 +14,8 @@ export default function MainLayout() {
                         { key: '/', label: <Link to="/">Главная</Link> },
                         { key: '/courses', label: <Link to="/courses">Курсы</Link> },
                         { key: '/teachers', label: <Link to="/teachers">Преподаватели</Link> },
+                        { key: '/students', label: <Link to="/students">Список студентов</Link> },
+                        { key: '/feedback', label: <Link to="/feedback">Обратная связь</Link> },
                         { key: '/about', label: <Link to="/about">О программе</Link> },
                     ]}
                 />

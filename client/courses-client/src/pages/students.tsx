@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import {
     Button,
     Card,
@@ -11,9 +11,6 @@ import {
     message,
 } from 'antd';
 
-// 👉 РАСКОММЕНТИРОВАТЬ ЕСЛИ НУЖЕН API
-// import { api, Student } from '@/services/api';
-
 interface Student {
     id: number;
     name: string;
@@ -24,7 +21,6 @@ export default function StudentsPage() {
     const [countText, setCountText] = useState('Количество студентов: 0');
     const [form] = Form.useForm();
 
-    // useEffect
     useEffect(() => {
         setCountText(`Количество студентов: ${students.length}`);
     }, [students]);
@@ -41,39 +37,16 @@ export default function StudentsPage() {
     };
 
     const deleteStudent = (id: number) => {
-        setStudents(students.filter((s) => s.id !== id));
+        setStudents(students.filter((student) => student.id !== id));
         message.success('Студент удалён');
     };
 
-    // API ВЕРСИЯ (НЕ ИСПОЛЬЗУЕТСЯ В ЗАДАНИИ)
-    /*
-    // загрузка студентов
-    const loadStudents = async () => {
-      const response = await api.get<Student[]>('/Students');
-      setStudents(response.data);
-    };
-  
-    useEffect(() => {
-      loadStudents();
-    }, []);
-  
-    // добавление через API
-    const addStudent = async (values: { name: string }) => {
-      await api.post('/Students', values);
-      loadStudents();
-    };
-  
-    // удаление через API
-    const deleteStudent = async (id: number) => {
-      await api.delete(`/Students/${id}`);
-      loadStudents();
-    };
-    */
-
-    // =========================
-
     return (
-        <Card title="Список студентов" bordered={false}>
+        <Card title="Список студентов">
+            <Typography.Paragraph>
+                Данные хранятся в состоянии компонента с помощью useState.
+            </Typography.Paragraph>
+
             <Typography.Text strong>{countText}</Typography.Text>
 
             <Form
@@ -84,7 +57,7 @@ export default function StudentsPage() {
             >
                 <Form.Item
                     name="name"
-                    rules={[{ required: true, message: 'Введите имя' }]}
+                    rules={[{ required: true, message: 'Введите имя студента' }]}
                 >
                     <Input placeholder="Имя студента" />
                 </Form.Item>
@@ -102,13 +75,13 @@ export default function StudentsPage() {
                 pagination={{ pageSize: 5 }}
                 columns={[
                     { title: 'ID', dataIndex: 'id' },
-                    { title: 'Имя', dataIndex: 'name' },
+                    { title: 'Имя студента', dataIndex: 'name' },
                     {
                         title: 'Действия',
-                        render: (_, record) => (
+                        render: (_, record: Student) => (
                             <Space>
                                 <Popconfirm
-                                    title="Удалить?"
+                                    title="Удалить студента?"
                                     okText="Да"
                                     cancelText="Нет"
                                     onConfirm={() => deleteStudent(record.id)}

@@ -1,5 +1,5 @@
-﻿import React, { useState } from 'react';
-import { Button, Card, Modal, Typography, Image } from 'antd';
+﻿import { useState } from 'react';
+import { Button, Card, Image, Modal, Typography } from 'antd';
 
 export default function AboutPage() {
     const [open, setOpen] = useState(false);
@@ -7,12 +7,11 @@ export default function AboutPage() {
     return (
         <Card title="О программе">
             <Typography.Paragraph>
-                Данное приложение разработано как клиентская часть SPA на React,
-                UmiJS и Ant Design.
+                Данное приложение разработано как SPA на React, UmiJS и Ant Design.
             </Typography.Paragraph>
 
             <Typography.Paragraph>
-                Приложение предназначено для работы с каталогом курсов и преподавателей.
+                Серверная часть в данной практической работе не используется.
             </Typography.Paragraph>
 
             <Button type="primary" onClick={() => setOpen(true)}>
@@ -26,12 +25,8 @@ export default function AboutPage() {
                 footer={null}
                 centered
             >
-                <Image
-                    src="/developer.jpg"
-                    alt="Фото разработчика"
-                    width="100%"
-                />
+                <Image src="/developer.jpg" alt="Фото разработчика" width="100%" />
             </Modal>
         </Card>
     );
-} 
+}
