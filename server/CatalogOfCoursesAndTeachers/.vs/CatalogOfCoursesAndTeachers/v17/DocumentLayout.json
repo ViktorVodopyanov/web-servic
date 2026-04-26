@@ -74,8 +74,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-25T11:16:59.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T11:16:59.577Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Controllers\\FeedbacksController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T10:57:16.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T10:57:16.587Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Controllers\\StudentController.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAADwv2sAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T10:56:43.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T10:56:43.654Z"
             },
             {
               "$type": "Document",
@@ -113,8 +110,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Models\\Student.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T10:55:55.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T10:55:55.554Z"
             },
             {
               "$type": "Document",
@@ -126,8 +122,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAgwB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T09:52:44.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T09:52:44.656Z"
             },
             {
               "$type": "Document",
@@ -139,8 +134,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Models\\Course.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T09:52:04.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T09:52:04.356Z"
             },
             {
               "$type": "Document",
@@ -152,8 +146,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-24T10:20:54.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T10:20:54.706Z"
             },
             {
               "$type": "Document",
@@ -178,8 +171,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Controllers\\CoursesController.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAADwv2IAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T09:54:21.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T09:54:21.262Z"
             },
             {
               "$type": "Document",
@@ -191,8 +183,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Controllers\\TeachersController.cs",
               "ViewState": "AgIAADYAAAAAAAAAAADwv1cAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T09:54:54.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T09:54:54.47Z"
             },
             {
               "$type": "Document",
@@ -204,8 +195,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Models\\Feedback.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T10:56:14.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T10:56:14.429Z"
             },
             {
               "$type": "Document",
@@ -217,8 +207,7 @@
               "RelativeToolTip": "CatalogOfCoursesAndTeachers\\Program.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAADwvyUAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T09:53:10.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T09:53:10.464Z"
             }
           ]
         }
