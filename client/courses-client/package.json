@@ -9,12 +9,19 @@
     "@ant-design/icons": "^5.6.1",
     "@umijs/max": "^4.6.47",
     "antd": "^5.29.3",
+    "exceljs": "^4.4.0",
+    "file-saver": "^2.0.5",
+    "html2canvas": "^1.4.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "recharts": "^3.8.1",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.7",
     "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",
+    "@types/xlsx": "^0.0.36",
     "typescript": "^5.9.3"
   }
 }
